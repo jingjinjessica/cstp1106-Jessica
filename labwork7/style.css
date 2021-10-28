@@ -1,0 +1,35 @@
+
+#header{
+  color: white;
+  background-color: green;
+  border:5px solid black;
+  margin:0px;
+}
+
+.border1{
+  border:1px solid black;
+  box-sizing: content-box;
+  width:35%;
+}
+
+#header2{
+  background-color: #ff9999;
+  border:3px solid black;
+  font-weight: bold;
+  margin:0px;
+}
+td,th,table{
+  border:1px solid black;
+  border-collapse: collapse;
+}
+
+tbody{
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+td{color:#ff6347;}
+a:link{color: red;}
+a:hover{color:green;}
+a:visited{color:yellow;}
+a:active{color:orange;}
