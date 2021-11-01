@@ -1,0 +1,61 @@
+div{
+  padding: 15px;
+}
+#header_style {
+  background-color: #d6cbd3;
+  text-align: center;
+}
+
+#footer_style {
+  background-color: #ada397;
+  text-align: center;
+  clear: both;
+}
+#main_area_style {
+  background-color: #eca1a6;
+  float: left;
+  width: 80%;
+  box-sizing: border-box;
+  height: 700px;
+
+}
+#nav_style {
+  background-color: #bdcebe;
+  float: right;
+  width: 20%;
+  box-sizing: border-box;
+  height: 700px;
+}
+#pt_style {
+  background-color:  #eca1a6;
+  float: left;
+  width: 30%;
+  box-sizing: border-box;
+  height: 300px;
+}
+#Ga_style {
+  background-color: #d6cbd3;
+  float: right;
+  width: 70%;
+  box-sizing: border-box;
+  height: 300px;
+}
+
+#right_style{
+  background-color:#d6cbd3;
+  float: right;
+  width: 30%;
+  box-sizing: border-box;
+  height: 300px;
+
+}
+td,th,table{
+  border:1px solid black;
+  border-collapse: collapse;
+}
+
+tbody{
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
