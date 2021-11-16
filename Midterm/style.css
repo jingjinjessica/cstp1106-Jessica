@@ -36,7 +36,7 @@ div{
 #Ga_style {
   background-color: #d6cbd3;
   float: right;
-  width: 70%;
+  width: 50%;
   box-sizing: border-box;
   height: 300px;
 }
@@ -44,7 +44,7 @@ div{
 #right_style{
   background-color:#d6cbd3;
   float: right;
-  width: 30%;
+  width: 50%;
   box-sizing: border-box;
   height: 300px;
 
