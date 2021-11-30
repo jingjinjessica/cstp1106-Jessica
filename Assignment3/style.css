@@ -1,0 +1,21 @@
+.gallery {
+  display: flex;
+  align-content: center;
+}
+
+#thumbnail {
+  width: 60%;
+  height: 1000px;
+  border-radius: 15px;
+}
+
+.small_image {
+  padding: 0.2em;
+  float: left;
+}
+
+.image_selection {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
