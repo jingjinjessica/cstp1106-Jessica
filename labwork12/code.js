@@ -1,7 +1,7 @@
 function process_(data) {
   console.log(data);
   $('#city_temperature').html(data.main.temp)
-  $('#city_weather').html(data.weather[0].main)
+
 }
 
 function call_ajax() {
@@ -14,7 +14,7 @@ function call_ajax() {
 
 function setup() {
   $('#get_temperature_button').click(call_ajax)
-  $('#get_weather_button').click(call_ajax)
+
 }
 
 $(document).ready(setup)
