@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+ <head>
+ <meta charset="utf-8">
+ <title>Final Exam </title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script type="text/javascript">
+
+ function showDescription(movieId){
+    $.ajax({
+      url: `https://imdb-api.com/en/API/Title/k_eu3xrtjw/${movieId}`,
+      success: function(data){
+        $("#plot").empty();
+        $("#plot").append(data.plot);
+      }
+    });
+ }
+ </script>
+ <style>
+ table, th, td {
+ border: 0px;
+ }
+ #plot {
+  margin-top: 10px;
+ }
+ #right {
+  vertical-align: text-top;
+ }
+ </style>
+ </head>
+   <body id="list_">
+    <table id="list" border="0">
+      <tr>
+        <td id=left width="400">
+          <div>Name:Jessica Jin ID: 000409875 </div>
+          <div>Search IMBD by title <input id="movie_input" type="text" width="20" /></div>
+          <div id="search_div"><input id="search_button" type="button" value="Search"></div>
+          <table id="movie_list">
+
+          </table>
+
+        </td>
+        <td id=right>
+          <p id="plot"></p>
+        </td>
+      </tr>
+
+    </table>
+   </body>
+
+   <script type="text/javascript">
+
+     $("#search_button").click(function(){
+      $.ajax({
+        url: "https://imdb-api.com/en/API/SearchMovie/k_eu3xrtjw/" + $("#movie_input").val(),
+        success: function(data){
+          $("#movie_list").remove();
+          $("#plot").empty();
+          let tabContent = $("<table id='movie_list'>");
+
+          $("#search_div").after(tabContent);
+          let index = 1
+          for (let record of data.results){
+            let tr1 = tabContent.append(`<tr>
+              <td>
+                <div> ${index}. Title: ${record.title}</div>
+                <div> Description: ${record.description}</div>
+                <img src="${record.image}" width=100/>
+                <input type="button" value="Show plot" onclick="showDescription('${record.id}')"/>
+                <hr/>
+              </td>
+              </tr>`);
+            index++;
+
+          }
+
+        }
+
+      });
+     })
+   </script>
+  </html>
